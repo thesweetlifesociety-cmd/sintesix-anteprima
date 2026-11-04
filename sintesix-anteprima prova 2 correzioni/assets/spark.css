@@ -555,3 +555,41 @@ html:not(.js) .sp-linguette{ display:none; }
 .spark .mv-mission .citazione p{ font-size:clamp(30px, 1.6vw + 20px, 44px); line-height:1.1; }
 .spark .mv-vision .corpo p{ font-size:clamp(19px, .5vw + 16px, 23px); line-height:1.45; }
 .spark .mv-mission + .mv-vision{ padding-top:0; }
+
+/* Piè di pagina: logo completo con la formula (in testata resta il marchio parola) */
+.sp-piede-marchio-completo{ width:250px; filter:none; }
+
+/* Bacheca, pezzi trasferiti dal vecchio sito: foto, gallerie, elenchi, citazioni, audio */
+.spark .articolo > :is(figure, .galleria, ul, ol, blockquote, audio, .tabella-scorre){ margin-top:1.6em; }
+.spark .articolo > :is(figure, .galleria, ul, ol, blockquote, audio, .tabella-scorre) + :is(p, h2){ margin-top:1.6em; }
+.spark .articolo .foto img{ display:block; width:100%; height:auto; border-radius:var(--sp-r); background:var(--sp-t2); }
+.spark .articolo .foto figcaption{ margin-top:10px; font-size:15px; line-height:1.4; color:var(--petrolio); }
+.spark .articolo .tabella-immagine img{ background:var(--bianco); border:1px solid var(--salvia); }
+.spark .articolo .galleria{ display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; align-items:start; }
+.spark .articolo .galleria-tre{ grid-template-columns:repeat(3, minmax(0, 1fr)); }
+@media (max-width:560px){ .spark .articolo .galleria, .spark .articolo .galleria-tre{ grid-template-columns:1fr; } }
+.spark .articolo ul, .spark .articolo ol{ padding-left:1.3em; }
+.spark .articolo ul{ list-style:disc; }
+.spark .articolo ol{ list-style:decimal; }
+.spark .articolo li{ font-size:var(--sp-txt); line-height:1.6; }
+.spark .articolo li + li{ margin-top:.5em; }
+.spark .articolo li::marker{ color:var(--petrolio); }
+.spark .articolo blockquote{ padding-left:22px; border-left:2px solid var(--arancio); }
+.spark .articolo audio{ display:block; width:100%; }
+.spark .articolo .augurio-grande{ max-width:560px; }
+
+/* Auguri annuali: l'archivio con le grafiche, dal 1998 */
+.spark .auguri-griglia{ display:grid; grid-template-columns:repeat(auto-fill, minmax(min(100%, 220px), 1fr)); gap:28px 14px; }
+.spark .augurio{ margin:0; scroll-margin-top:calc(var(--testata, 80px) + 24px); }
+.spark .augurio a{ display:block; aspect-ratio:1; padding:10px; border-radius:var(--sp-r); background:var(--sp-t2); }
+.spark .augurio a:hover{ background:var(--sp-t1); }
+.spark .augurio img{ display:block; width:100%; height:100%; object-fit:contain; }
+.spark .augurio:target a{ outline:2px solid var(--arancio); outline-offset:3px; }
+.spark .augurio figcaption{ margin-top:12px; font-size:14px; line-height:1.4; letter-spacing:.03em; }
+.spark .augurio figcaption b{ display:block; margin-bottom:2px; font-weight:500; color:var(--petrolio); }
+
+/* Bacheca, colonna Auguri: miniatura della grafica accanto al titolo */
+.spark .colonna-pezzi .sp-risorsa-augurio .sp-risorsa-basso{ display:grid; grid-template-columns:72px minmax(0, 1fr) auto; align-items:center; gap:16px; }
+.spark .sp-risorsa-img{ width:72px; height:72px; object-fit:cover; border-radius:6px; background:var(--bianco); }
+.spark .sp-risorsa-testi{ display:flex; flex-direction:column; gap:6px; min-width:0; }
+.spark .colonna-pezzi .sp-risorsa-augurio .sp-risorsa-titolo{ font-size:19px; }
