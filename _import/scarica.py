@@ -11,12 +11,12 @@ os.makedirs("_import/html", exist_ok=True); os.makedirs("_import/uploads", exist
 log = []
 imgs = set()
 for path in [l.strip() for l in open("_import/pagine.txt") if l.strip()]:
-    name = path.strip("/").replace("/", "__") or "home"
+    name = path.strip("/").replace("/", "__").replace("?", "_").replace("=", "-") or "home"
     try:
         data = get(BASE + path)
         open(f"_import/html/{name}.html", "wb").write(data)
         log.append(f"OK {path} {len(data)}")
-        for m in re.findall(r'/public/uploads/[^"\'\s<>?)]+?\.(?:jpe?g|png|gif|webp|svg|pdf)', data.decode("utf-8", "replace"), re.I):
+        for m in re.findall(r'/public/uploads/[^"\'\s<>?)]+?\.(?:jpe?g|png|gif|webp|svg|pdf|mp3|m4a)', data.decode("utf-8", "replace"), re.I):
             imgs.add(m)
             imgs.add(re.sub(r'-\d+x\d+(\.\w+)$', r'\1', m))
     except Exception as e:

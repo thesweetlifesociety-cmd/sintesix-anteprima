@@ -38,3 +38,7 @@
 /curiosita/marchio-definizione-e-volgarizzazione/
 /curiosita/luca-pacioli-giornale-cap-x/
 /curiosita/
+/curiosita/feed/
+/curiosita/luca-pacioli-giornale-cap-x/feed/
+/curiosita/marchio-definizione-e-volgarizzazione/feed/
+/feed/?post_type=curiosita
