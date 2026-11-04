@@ -22,11 +22,13 @@ for path in [l.strip() for l in open("_import/pagine.txt") if l.strip()]:
     except Exception as e:
         log.append(f"ERR {path} {e}")
     time.sleep(0.5)
-for m in sorted(imgs):
-    dest = "_import/uploads/" + m[len("/public/uploads/"):]
+extra = [l.strip() for l in open("_import/extra.txt") if l.strip()] if os.path.exists("_import/extra.txt") else []
+for m in sorted(imgs) + extra:
+    dest = ("_import/uploads/" + m[len("/public/uploads/"):]) if m.startswith("/public/uploads/") else "_import/extra/" + m.rsplit("/", 1)[-1]
+    if os.path.exists(dest): continue
     os.makedirs(os.path.dirname(dest), exist_ok=True)
     try:
-        data = get(BASE + urllib.parse.quote(m))
+        data = get(BASE + urllib.parse.quote(urllib.parse.unquote(m)))
         open(dest, "wb").write(data)
         log.append(f"OK {m} {len(data)}")
     except Exception as e:

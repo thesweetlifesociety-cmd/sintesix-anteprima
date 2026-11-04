@@ -2,7 +2,7 @@ name: Import dal vecchio sito
 on:
   push:
     branches: [import-vecchio-sito]
-    paths: ['_import/pagine.txt', '_import/scarica.py']
+    paths: ['_import/pagine.txt', '_import/scarica.py', '_import/extra.txt']
   workflow_dispatch:
 permissions:
   contents: write
