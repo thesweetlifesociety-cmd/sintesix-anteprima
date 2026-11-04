@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&amp;family=Petrona:wght@300;400;500&amp;display=swap">
-<link rel="stylesheet" href="assets/sintesix.css?v=3">
-<link rel="stylesheet" href="assets/spark.css?v=3">
+<link rel="stylesheet" href="assets/sintesix.css?v=4">
+<link rel="stylesheet" href="assets/spark.css?v=4">
 <script>(function(h){h.classList.add("js");if(!matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("anim");setTimeout(function(){if(!window.sparkPronto){h.classList.remove("anim")}},3000)}})(document.documentElement)</script>
 </head>
 <body class="spark">
@@ -31,7 +31,7 @@
 </header>
 <main id="contenuto">
 
-<section class="sp-foto-eroe" aria-labelledby="t-home">
+<section class="sp-foto-eroe" aria-labelledby="t-home" data-eroe>
   <img class="sp-fe-img" src="assets/foto/riunione.jpg" alt="I professionisti dello Studio attorno al tavolo delle riunioni" width="2048" height="1366" fetchpriority="high">
   <div class="sp-wrap sp-fe-dentro">
   <div class="sp-eroe-testo">
@@ -49,10 +49,10 @@
     </ul>
   </div>
   </div>
+  <span class="sp-scorri" aria-hidden="true"></span>
 </section>
 
 <section class="sp-sezione sp-wrap sp-nome" aria-label="Il nome dello Studio">
-  <figure class="sp-nome-foto" data-rivela><img src="assets/foto/dettaglio.jpg" alt="I biglietti da visita SINTESIX sulla scrivania" width="900" height="1350" loading="lazy"></figure>
   <div class="sp-mazzo">
     <p class="sr">Sistemi per Risorse per Esperienze uguale Soluzioni.</p>
     <div class="sp-carta c1" aria-hidden="true"><span class="op"></span><span>Sistemi</span></div>
@@ -65,7 +65,7 @@
 
 <section class="sp-sezione sp-wrap" aria-labelledby="t-cifre">
   <h2 class="sp-centro" id="t-cifre" data-parole>Lo Studio, in tre cifre</h2>
-  <ul class="sp-numeri" data-rivela>
+  <ul class="sp-numeri" data-rivela data-conta>
     <li class="n1"><b>1956</b><span>L’anno di fondazione dello Studio, a Torino</span></li>
     <li class="n2"><b>3</b><span>Studi aggregati fra il 2014 e il 2023</span></li>
     <li class="n3"><b>11</b><span>Tra professionisti (8), praticanti (2) e responsabili (1), fra Torino e Avigliana</span></li>
@@ -157,7 +157,7 @@
   </div>
 </section>
 
-<figure class="sp-banda" data-rivela>
+<figure class="sp-banda" data-rivela data-foto>
   <img src="assets/foto/open-space.jpg" alt="L'ufficio operativo dello Studio, con le postazioni di lavoro" width="2048" height="1366" loading="lazy">
   <figcaption class="sp-wrap"><span class="sp-eyebrow">Ogni giorno</span><span class="sp-banda-t">Gli adempimenti di ogni mese, seguiti da persone che conoscete per nome.</span></figcaption>
 </figure>
@@ -186,19 +186,7 @@
   </div>
 </section>
 
-<section class="sp-sezione sp-wrap" aria-labelledby="t-vicino">
-  <div class="sp-testa"><div><p class="sp-eyebrow" data-rivela>Gli spazi</p><h2 id="t-vicino" data-parole>Lo Studio, da vicino</h2></div></div>
-  <div class="sp-mosaico" data-gruppo="110">
-    <figure class="m1" data-rivela><img src="assets/foto/corridoio-dialogo.jpg" alt="Due professionisti si confrontano nel corridoio dello Studio" width="1200" height="800" loading="lazy"></figure>
-    <figure class="m2" data-rivela><img src="assets/foto/labor-omnia-vincit.jpg" alt="L'ingresso con il motto Labor omnia vincit" width="900" height="1350" loading="lazy"></figure>
-    <figure class="m3" data-rivela><img src="assets/foto/sala-legno.jpg" alt="Tre colleghe nella sala riunioni rivestita in legno" width="1200" height="800" loading="lazy"></figure>
-    <figure class="m4" data-rivela><img src="assets/foto/tavolo-tondo.jpg" alt="Una riunione al tavolo tondo" width="900" height="600" loading="lazy"></figure>
-    <figure class="m5" data-rivela><img src="assets/foto/lavoro.jpg" alt="Due colleghe esaminano una pratica" width="900" height="600" loading="lazy"></figure>
-  </div>
-</section>
-
-<section class="sp-notte sp-notte-foto" aria-labelledby="t-colleghi">
-  <img class="sp-notte-img" src="assets/foto/tavolo.jpg" alt="" width="1800" height="1201" loading="lazy">
+<section class="sp-notte" aria-labelledby="t-colleghi">
   <div class="sp-wrap sp-notte-griglia">
     <div>
       <p class="sp-eyebrow" data-rivela>Ai colleghi</p>
@@ -219,7 +207,7 @@
     </div>
     <a class="sp-bot" href="professionisti.html" data-rivela>Tutti i professionisti</a>
   </div>
-  <figure class="sp-gruppo" data-rivela><img src="assets/foto/squadra.jpg" alt="Lo Studio al completo nella sala riunioni" width="2048" height="1366" loading="lazy"></figure>
+  <figure class="sp-gruppo" data-rivela data-foto><img src="assets/foto/squadra.jpg" alt="Lo Studio al completo nella sala riunioni" width="2048" height="1366" loading="lazy"></figure>
   <ul class="sp-partner" data-gruppo="110">
     <li data-rivela><a class="sp-p t1" href="professionisti.html#marco-savio">
       <span><span class="sp-p-nome">Marco Savio</span><span class="sp-p-ruolo">Dottore Commercialista · Consulente Tecnico del Tribunale</span></span>
@@ -268,16 +256,13 @@
   <ul class="sp-risorse" data-gruppo="110"><li data-rivela><a class="sp-risorsa" href="bacheca-medagliere-olimpico.html"><span class="sp-risorsa-alto"><span class="sp-risorsa-data">23 febbraio 2026</span><span class="sp-risorsa-cat">Articoli</span></span><span class="sp-risorsa-basso"><h3 class="sp-risorsa-titolo">Ma l’Italia è davvero quarta nel medagliere olimpico del 2026?</h3><span class="sp-risorsa-riga">La classifica si stila in base agli ori.</span><span class="sp-freccia" aria-hidden="true">→</span></span></a></li><li data-rivela><a class="sp-risorsa" href="bacheca-grappein-e-la-casa-dellorologio-di-cogne.html"><span class="sp-risorsa-alto"><span class="sp-risorsa-data">28 agosto 2026</span><span class="sp-risorsa-cat">Curiosità</span></span><span class="sp-risorsa-basso"><h3 class="sp-risorsa-titolo">Grappein e la Casa dell’Orologio di Cogne</h3><span class="sp-risorsa-riga">Un medico che, duecento anni fa, gestì una miniera.</span><span class="sp-freccia" aria-hidden="true">→</span></span></a></li><li data-rivela><a class="sp-risorsa" href="bacheca-auguri-2026.html"><span class="sp-risorsa-alto"><span class="sp-risorsa-data">gennaio 2026</span><span class="sp-risorsa-cat">Auguri annuali</span></span><span class="sp-risorsa-basso"><h3 class="sp-risorsa-titolo">2026 · Orgoglio italiano</h3><span class="sp-risorsa-riga">Gli auguri del settantesimo anno.</span><span class="sp-freccia" aria-hidden="true">→</span></span></a></li></ul>
 </section>
 
-<section class="sp-sezione sp-wrap sp-invito sp-invito-foto" aria-labelledby="t-invito">
-  <figure class="sp-invito-img" data-rivela><img src="assets/foto/confronto.jpg" alt="Un professionista illustra un documento a una collega" width="1200" height="800" loading="lazy"></figure>
-  <div class="sp-invito-testo">
+<section class="sp-sezione sp-wrap sp-invito" aria-labelledby="t-invito">
   <h2 class="sp-grande" id="t-invito" data-parole>Parliamone.</h2>
   <p class="sp-sub" data-rivela data-ritardo="200">Raccontateci come gestite oggi l’amministrazione. Il primo incontro serve a inquadrare la richiesta.</p>
   <div class="sp-bottoni" data-rivela data-ritardo="350">
     <a class="sp-bot sp-pieno" href="contatti.html">Richiedi un primo colloquio</a>
     <a class="sp-bot" href="tel:+390115070211">011 50.70.211</a>
   </div>
-</div>
 </section>
 </main>
 <footer class="sp-piede">
@@ -328,5 +313,6 @@
 </div>
 <script src="assets/sintesix.js" defer></script>
 <script src="assets/spark.js" defer></script>
+<script src="assets/prova3.js?v=3" defer></script>
 </body>
 </html>
