@@ -660,7 +660,7 @@ html:not(.js) .sp-linguette{ display:none; }
 
 /* banda fotografica a tutta larghezza: la foto scorre più lenta della pagina */
 .sp-banda{ position:relative; height:clamp(460px, 78vh, 820px); overflow:hidden; color:var(--bianco); background:var(--ardesia); }
-.sp-banda img{ position:absolute; inset:-12% 0; height:124%; will-change:transform; }
+.spark .sp-banda img{ position:absolute; inset:-12% 0; height:124%; will-change:transform; }
 .sp-banda::after{ content:""; position:absolute; inset:0; background:linear-gradient(0deg, rgba(31,40,44,.82) 0%, rgba(31,40,44,.1) 60%); }
 .sp-banda figcaption{ position:absolute; left:0; right:0; bottom:clamp(36px, 4.5vw, 64px); margin-inline:auto; z-index:1; display:grid; gap:14px; }
 .sp-banda .sp-eyebrow{ color:var(--salvia); }
@@ -728,3 +728,8 @@ a.sp-pila:hover, a.sp-p:hover{ transform:translateY(-3px); box-shadow:var(--sp-o
   .sp-scorri::after{ animation:none; top:0; }
   .anim [data-foto]{ clip-path:none !important; } .anim [data-foto] img{ transform:none !important; }
 }
+
+/* pagine interne: la foto d'apertura è una banda a tutta larghezza, più bassa, senza testo */
+.sp-banda-pagina{ height:clamp(280px, 48vh, 600px); margin-top:clamp(8px, 2vw, 24px); }
+.sp-banda-pagina::after{ background:linear-gradient(0deg, rgba(31,40,44,.18), transparent 40%); }
+.sp-banda-pagina + .sezione{ padding-top:calc(var(--sp-aria) / 2); }

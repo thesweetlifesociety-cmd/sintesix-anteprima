@@ -414,9 +414,6 @@ article.wrap{ padding-bottom:calc(var(--aria) / 2); }
 }
 
 /* ===== Prova 3 · fotografie ===== */
-.foto-apertura{ margin-block:0; }
-.foto-apertura img{ display:block; width:100%; aspect-ratio:21/9; object-fit:cover; object-position:50% 45%; border-radius:8px; }
-@media (max-width:720px){ .foto-apertura img{ aspect-ratio:4/3; } }
 .sp-ritratti{ list-style:none; padding:0; display:grid; grid-template-columns:repeat(5, minmax(0, 1fr)); gap:12px; }
 .sp-ritratti li{ aspect-ratio:3/4; border-radius:8px; overflow:hidden; background:var(--nebbia); }
 .sp-ritratti img{ display:block; width:100%; height:100%; object-fit:cover; }
