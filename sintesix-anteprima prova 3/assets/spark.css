@@ -733,3 +733,57 @@ a.sp-pila:hover, a.sp-p:hover{ transform:translateY(-3px); box-shadow:var(--sp-o
 .sp-banda-pagina{ height:clamp(280px, 48vh, 600px); margin-top:clamp(8px, 2vw, 24px); }
 .sp-banda-pagina::after{ background:linear-gradient(0deg, rgba(31,40,44,.18), transparent 40%); }
 .sp-banda-pagina + .sezione{ padding-top:calc(var(--sp-aria) / 2); }
+
+/* ===== Prova 3 · impaginazione ===== */
+.spark{
+  --sp-h1:clamp(40px, 3vw + 18px, 68px);
+  --sp-h2:clamp(32px, 2vw + 16px, 50px);
+  --sp-sub:clamp(19px, .6vw + 15px, 24px);
+}
+.sp-foto-eroe h1{ font-size:clamp(42px, 3.6vw + 18px, 78px); }
+
+/* il nome: testo a sinistra, il conto a destra */
+.sp-nome{ display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:40px clamp(48px, 6vw, 112px); align-items:center; max-width:calc(var(--sp-max) + 2 * var(--sp-lato)); }
+.sp-nome-testo{ display:grid; gap:20px; justify-items:start; max-width:460px; }
+.sp-nome-testo .sp-txt{ color:var(--petrolio); }
+.sp-nome .sp-mazzo-nota{ display:none; }
+@media (max-width:860px){ .sp-nome{ grid-template-columns:1fr; } }
+
+/* le tre cifre: in riga, come un sommario */
+.spark .sp-numeri{ grid-template-columns:repeat(3, minmax(0, 1fr)); gap:0 clamp(24px, 3vw, 48px); margin-top:clamp(32px, 4vw, 56px); border-top:1px solid var(--ardesia); }
+.spark .sp-numeri li, .anim .spark .sp-numeri li{ position:static; display:grid; grid-template-columns:1fr; align-content:start; gap:12px; margin:0; padding:clamp(24px, 2.4vw, 36px) 0 0; background:none; border-radius:0; }
+.spark .sp-numeri b{ font-size:clamp(56px, 4.6vw + 16px, 96px); }
+.spark .sp-numeri span{ font-size:17px; line-height:1.4; max-width:30ch; }
+.sp-centro{ max-width:none; text-align:left; margin:0; }
+@media (max-width:720px){ .spark .sp-numeri{ grid-template-columns:1fr; gap:0; } .spark .sp-numeri li{ border-top:1px solid var(--salvia); } .spark .sp-numeri li:first-child{ border-top:0; } }
+
+/* le sedi: titolo sopra, tre schede in riga */
+.spark [aria-labelledby="t-sedi"].sp-due-col{ grid-template-columns:1fr; gap:clamp(28px, 3vw, 44px); }
+.spark [aria-labelledby="t-sedi"] .sp-pile{ grid-template-columns:repeat(3, minmax(0, 1fr)); }
+.spark [aria-labelledby="t-sedi"] .sp-pila{ min-height:168px; align-content:start; }
+@media (max-width:860px){ .spark [aria-labelledby="t-sedi"] .sp-pile{ grid-template-columns:1fr; } }
+
+/* la Bacheca in Home: schede compatte */
+.spark .sp-risorsa{ min-height:0; background:var(--bianco); border:1px solid rgba(48,60,66,.14); }
+.spark a.sp-risorsa:hover{ background:var(--sp-t1); }
+.spark .sp-risorsa-alto{ flex-direction:row; align-items:center; justify-content:space-between; min-height:0; padding:18px 24px 0; background:none; }
+.spark .sp-risorsa-cat{ font-family:var(--testo); font-size:14px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; color:var(--petrolio); }
+.spark .sp-risorsa-data{ letter-spacing:.04em; text-transform:none; font-weight:400; }
+.spark .sp-risorsa-basso{ padding:20px 24px 24px; gap:10px; }
+.spark .sp-risorsa-titolo{ font-family:var(--titoli); font-size:clamp(24px, 1vw + 16px, 32px); line-height:1.12; }
+.spark .sp-risorsa .sp-freccia{ margin-top:auto; }
+
+/* pagine interne: titolo a sinistra, contenuto a destra */
+@media (min-width:961px){
+  .spark .sezione.sp-doppia{ display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); column-gap:clamp(40px, 5vw, 96px); align-items:start; }
+  .spark .sp-doppia > .testa{ grid-column:1; position:sticky; top:112px; margin-bottom:0; max-width:420px; }
+  .spark .sp-doppia > :not(.testa){ grid-column:2; }
+  .spark .sp-doppia > .punti, .spark .sp-doppia > .numerato, .spark .sp-doppia > .corpo, .spark .sp-doppia > .modulo, .spark .sp-doppia > .citazione{ max-width:none; }
+  .spark .sp-doppia > .numerato{ margin-top:0; }
+  .spark .sp-doppia > .bottoni{ margin-top:32px; }
+  /* un elenco da solo riempie la riga su due colonne */
+  .spark .sezione > .punti:first-child:has(li:nth-child(6)){ max-width:none; display:block; columns:2; column-gap:48px; }
+  .spark .sezione > .punti:first-child:has(li:nth-child(6)) li{ break-inside:avoid; margin-bottom:12px; }
+}
+.spark .pannello{ padding:clamp(40px, 5vw, 72px) clamp(28px, 4vw, 64px); }
+.spark .corpo{ max-width:62ch; }
