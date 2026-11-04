@@ -730,7 +730,7 @@ a.sp-pila:hover, a.sp-p:hover{ transform:translateY(-3px); box-shadow:var(--sp-o
 }
 
 /* pagine interne: la foto d'apertura è una banda a tutta larghezza, più bassa, senza testo */
-.sp-banda-pagina{ height:clamp(280px, 48vh, 600px); margin-top:clamp(8px, 2vw, 24px); }
+.sp-banda-pagina{ height:clamp(320px, 56vh, 680px); margin-top:clamp(8px, 2vw, 24px); }
 .sp-banda-pagina::after{ background:linear-gradient(0deg, rgba(31,40,44,.18), transparent 40%); }
 .sp-banda-pagina + .sezione{ padding-top:calc(var(--sp-aria) / 2); }
 
