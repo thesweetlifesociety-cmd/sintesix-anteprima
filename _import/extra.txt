@@ -1,2 +1,4 @@
 /public/themes/savioassociati/images/sintesix-2023.png
 /public/themes/savioassociati/images/footer-loghi.png
+/public/uploads/Brand.mp3
+/public/uploads/cap-X-Giornale.mp3
