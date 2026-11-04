@@ -42,7 +42,6 @@ OK /curiosita/feed/ 19440
 OK /curiosita/luca-pacioli-giornale-cap-x/feed/ 852
 OK /curiosita/marchio-definizione-e-volgarizzazione/feed/ 877
 OK /feed/?post_type=curiosita 19450
-OK /public/uploads/03-cap-XIV-portare-a-QUADERNO-linee-articoli.mp3 1644901
 ERR /public/uploads/2017/03/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-FILIERA-300x225.jpg HTTP Error 404: Not Found
 ERR /public/uploads/2017/03/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-FILIERA.jpg HTTP Error 404: Not Found
 ERR /public/uploads/2017/03/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-TRENINO-300x225.jpg HTTP Error 404: Not Found
@@ -57,3 +56,5 @@ ERR /public/uploads/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-FILIERA-300x225.
 ERR /public/uploads/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-FILIERA.jpg HTTP Error 404: Not Found
 ERR /public/uploads/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-TRENINO-300x225.jpg HTTP Error 404: Not Found
 ERR /public/uploads/PROFESSIONISTI-Perch%C3%A9-Studio-Associato-TRENINO.jpg HTTP Error 404: Not Found
+OK /public/uploads/Brand.mp3 3277152
+OK /public/uploads/cap-X-Giornale.mp3 877571
