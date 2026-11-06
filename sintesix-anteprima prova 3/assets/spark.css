@@ -805,3 +805,43 @@ a.sp-p.t1:hover, a.sp-p.t2:hover, a.sp-p.t3:hover{ background:var(--sp-t3); }
 .x-deco-a{ top:-22px; left:-18px; transform:rotate(-8deg); }
 .x-deco-b{ bottom:-26px; right:-14px; transform:rotate(10deg); }
 @media (min-width:calc(1200px + 2 * 56px)){ .invito-centro{ margin-inline:auto; } }
+
+/* ===== Prova 3 · telefono ===== */
+@media (max-width:720px){
+  .spark{ --sp-aria:72px; }
+  /* apertura: più bassa, testo in basso con respiro */
+  .sp-foto-eroe{ min-height:min(80svh, 640px); }
+  .sp-fe-dentro{ padding-top:132px; padding-bottom:28px; }
+  .sp-foto-eroe h1{ font-size:clamp(36px, 10vw, 44px); }
+  .sp-foto-eroe .sp-sub{ font-size:17px; }
+  .sp-foto-eroe .sp-eyebrow{ font-size:12px; }
+  .sp-foto-eroe .sp-dati{ display:none; }
+  /* linguette e sottomenu: una riga che scorre di lato, senza andare a capo */
+  .sp-linguette{ display:flex; grid-template-columns:none; overflow-x:auto; -webkit-overflow-scrolling:touch; scroll-snap-type:x proximity; }
+  .sp-linguette button{ flex:0 0 auto; white-space:nowrap; scroll-snap-align:start; padding:10px 16px; font-size:12px; letter-spacing:.08em; }
+  .spark .sottomenu ul{ display:flex; flex-wrap:nowrap; width:100%; overflow-x:auto; scrollbar-width:none; }
+  .spark .sottomenu ul::-webkit-scrollbar{ display:none; }
+  .spark .sottomenu a{ white-space:nowrap; }
+  /* banda "Ogni giorno": titolo più contenuto */
+  .sp-banda{ height:clamp(300px, 48vh, 420px); }
+  .sp-banda-t{ font-size:clamp(26px, 7.4vw, 34px); }
+  /* schede dei Partner: ritratto a sinistra, nome e ruolo a destra, dati sotto */
+  .sp-p:has(.sp-p-foto){ display:grid; grid-template-columns:104px minmax(0, 1fr); grid-template-rows:auto auto; gap:8px 18px; align-items:center; }
+  .sp-p-foto{ grid-row:1 / 3; aspect-ratio:4/5; }
+  .sp-p:has(.sp-p-foto) > span:not(.sp-p-dati){ grid-column:2; align-self:end; }
+  .sp-p:has(.sp-p-foto) .sp-p-dati{ grid-column:1 / -1; margin-top:12px; padding-top:14px; border-top:1px solid rgba(48,60,66,.14); }
+  .sp-p-nome{ font-size:24px; }
+  /* Bacheca: via il blocco alto vuoto sopra il titolo */
+  .spark .sp-risorsa{ min-height:0; }
+  .spark .sp-risorsa-alto{ min-height:0; padding-bottom:14px; }
+  .spark .sp-risorsa-cat{ font-size:22px; }
+  /* Parliamone: le X non coprono il titolo */
+  .x-deco{ width:64px; opacity:.35; }
+  .x-deco-a{ top:-14px; left:-12px; } .x-deco-b{ bottom:-16px; right:-10px; }
+  .invito-centro{ padding-inline:20px; }
+  .spark .invito-centro .sp-grande{ font-size:clamp(44px, 14vw, 64px); }
+  /* elenchi numerati: numero più stretto */
+  .spark .numerato li{ grid-template-columns:28px minmax(0, 1fr); gap:10px; }
+  /* le persone: schede meno pesanti */
+  .persone-grandi .persona{ padding-block:24px; }
+}
