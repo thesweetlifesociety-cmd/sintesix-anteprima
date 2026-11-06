@@ -9,8 +9,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&amp;family=Petrona:wght@300;400;500&amp;display=swap">
-<link rel="stylesheet" href="assets/sintesix.css?v=10">
-<link rel="stylesheet" href="assets/spark.css?v=10">
+<link rel="stylesheet" href="assets/sintesix.css?v=11">
+<link rel="stylesheet" href="assets/spark.css?v=11">
 <script>(function(h){h.classList.add("js");if(!matchMedia("(prefers-reduced-motion: reduce)").matches){h.classList.add("anim");setTimeout(function(){if(!window.sparkPronto){h.classList.remove("anim")}},3000)}})(document.documentElement)</script>
 </head>
 <body class="spark">
@@ -172,32 +172,21 @@
   <figcaption class="sp-wrap"><span class="sp-eyebrow">Ogni giorno</span><span class="sp-banda-t">Gli adempimenti di ogni mese, seguiti da persone che conoscete per nome.</span></figcaption>
 </figure>
 
-<section class="sp-sezione sp-wrap sp-due-col" aria-labelledby="t-sedi">
-  <div class="sp-due-testa">
-    <p class="sp-eyebrow" data-rivela>Le sedi</p>
-    <h2 id="t-sedi" data-parole>Due sedi, gli stessi professionisti</h2>
-  </div>
-  <div class="sp-pile" data-gruppo="110">
-    <a class="sp-pila" href="sede-torino.html" data-rivela>
-      <span class="sp-eyebrow">Torino · Sede legale</span>
-      <span class="sp-pila-t">Via Montevecchio&nbsp;11</span>
-      <span class="sp-pila-s">011 50.70.211 · posti auto in cortile per i Clienti</span>
-    </a>
-    <a class="sp-pila" href="sede-avigliana.html" data-rivela>
-      <span class="sp-eyebrow">Avigliana · Unità locale</span>
-      <span class="sp-pila-t">Corso Torino&nbsp;6/b</span>
-      <span class="sp-pila-s">Già Studio Greco · 011 50.70.211</span>
-    </a>
-    <div class="sp-pila" data-rivela>
-      <span class="sp-eyebrow">Orario, uguale nelle due sedi</span>
-      <span class="sp-pila-t">Lunedì⁠–⁠venerdì</span>
-      <span class="sp-pila-s">8.45⁠–⁠12.30 · 13.15⁠–⁠17.30</span>
+<section class="sp-sezione sp-wrap sedi-home" aria-labelledby="t-sedi">
+  <div class="sp-testa">
+    <div>
+      <p class="sp-eyebrow" data-rivela>Le sedi</p>
+      <h2 id="t-sedi" data-parole>Due sedi, gli stessi professionisti</h2>
     </div>
+    <p class="sedi-orario" data-rivela><span>Orario, uguale nelle due sedi</span><strong>Lunedì&#8288;–&#8288;venerdì · 8.45&#8288;–&#8288;12.30 · 13.15&#8288;–&#8288;17.30</strong></p>
+  </div>
+  <div class="sedi-schede" data-gruppo="110">
+    <a class="sede-scheda" data-rivela href="sede-torino.html"><img src="assets/foto/torino-corridoio.jpg" alt="Il corridoio della sede di Torino" width="1800" height="1200" loading="lazy"><span class="sede-scheda-testo"><span class="sp-eyebrow">Torino · Sede legale</span><span class="sede-scheda-t">Via Montevecchio&nbsp;11</span><span class="sede-scheda-s">011 50.70.211 · posti auto in cortile per i Clienti</span></span></a>
+    <a class="sede-scheda" data-rivela href="sede-avigliana.html"><img src="assets/foto/avigliana-ufficio.jpg" alt="L’ufficio della sede di Avigliana" width="1800" height="1200" loading="lazy"><span class="sede-scheda-testo"><span class="sp-eyebrow">Avigliana · Unità locale</span><span class="sede-scheda-t">Corso Torino&nbsp;6/b</span><span class="sede-scheda-s">Già Studio Greco · 011 50.70.211</span></span></a>
   </div>
 </section>
 
 <section class="sp-notte sp-notte-foto" aria-labelledby="t-colleghi">
-  <img class="sp-notte-img" src="assets/foto/corridoio-bandiera.jpg" alt="" width="1400" height="2100" loading="lazy">
   <div class="sp-wrap sp-notte-griglia">
     <div>
       <p class="sp-eyebrow" data-rivela>Ai colleghi</p>
@@ -218,41 +207,28 @@
     </div>
     <a class="sp-bot" href="professionisti.html" data-rivela>Tutti i professionisti</a>
   </div>
-  <figure class="sp-gruppo" data-rivela data-foto><img src="assets/foto/squadra.jpg" alt="Lo Studio al completo nella sala riunioni" width="2048" height="1366" loading="lazy" style="object-position:50% 20%"></figure>
   <ul class="sp-partner" data-gruppo="110">
-    <li data-rivela><a class="sp-p t1" href="professionisti.html#marco-savio">
+    <li data-rivela><a class="sp-p t1" href="professionisti.html#marco-savio"><img class="sp-p-foto" src="assets/ritratti/marco-savio.jpg" alt="Ritratto di Marco Savio" width="900" height="1200" loading="lazy">
       <span><span class="sp-p-nome">Marco Savio</span><span class="sp-p-ruolo">Dottore Commercialista · Consulente Tecnico del Tribunale</span></span>
       <span class="sp-p-dati">
         <span><span class="sp-p-dt">Iscritto all’Ordine dei Dottori Commercialisti dal</span><span class="sp-p-dd">1971</span></span>
         <span><span class="sp-p-dt">Consulente del Lavoro</span><span class="sp-p-dd">1969⁠–⁠2012</span></span>
       </span>
     </a></li>
-    <li data-rivela><a class="sp-p t2" href="professionisti.html#federica-savio">
+    <li data-rivela><a class="sp-p t2" href="professionisti.html#federica-savio"><img class="sp-p-foto" src="assets/ritratti/federica-savio.jpg" alt="Ritratto di Federica Savio" width="900" height="1200" loading="lazy">
       <span><span class="sp-p-nome">Federica Savio</span><span class="sp-p-ruolo">Dottore Commercialista</span></span>
       <span class="sp-p-dati">
         <span><span class="sp-p-dt">Iscritta all’Ordine dei Dottori Commercialisti dal</span><span class="sp-p-dd">2014</span></span>
         <span><span class="sp-p-dt">Italian Certified Advisor</span><span class="sp-p-dd sp-dd-testo">Emirati Arabi Uniti</span></span>
       </span>
     </a></li>
-    <li data-rivela><a class="sp-p t3" href="professionisti.html#valli-pegoraro">
+    <li data-rivela><a class="sp-p t3" href="professionisti.html#valli-pegoraro"><img class="sp-p-foto" src="assets/ritratti/valli-pegoraro.jpg" alt="Ritratto di Valli Pegoraro" width="900" height="1200" loading="lazy">
       <span><span class="sp-p-nome">Valli Pegoraro</span><span class="sp-p-ruolo">Consulente del Lavoro · Gestore della Crisi</span></span>
       <span class="sp-p-dati">
         <span><span class="sp-p-dt">Iscritta all’Ordine dei Consulenti del Lavoro dal</span><span class="sp-p-dd">1996</span></span>
         <span><span class="sp-p-dt">Iscritta all’Ordine di Torino dal</span><span class="sp-p-dd">2022</span></span>
       </span>
     </a></li>
-  </ul>
-  <ul class="sp-ritratti" aria-label="Le persone dello Studio" data-gruppo="70">
-    <li data-rivela><img src="assets/foto/ritratto-a.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-b.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-c.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-d.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-e.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-f.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-g.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-h.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-i.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
-    <li data-rivela><img src="assets/foto/ritratto-j.jpg" alt="Ritratto di un professionista dello Studio" width="720" height="960" loading="lazy"></li>
   </ul>
 </section>
 
@@ -267,7 +243,8 @@
   <ul class="sp-risorse" data-gruppo="110"><li data-rivela><a class="sp-risorsa" href="bacheca-medagliere-olimpico.html"><span class="sp-risorsa-alto"><span class="sp-risorsa-data">23 febbraio 2026</span><span class="sp-risorsa-cat">Articoli</span></span><span class="sp-risorsa-basso"><h3 class="sp-risorsa-titolo">Ma l’Italia è davvero quarta nel medagliere olimpico del 2026?</h3><span class="sp-risorsa-riga">La classifica si stila in base agli ori.</span><span class="sp-freccia" aria-hidden="true">→</span></span></a></li><li data-rivela><a class="sp-risorsa" href="bacheca-grappein-e-la-casa-dellorologio-di-cogne.html"><span class="sp-risorsa-alto"><span class="sp-risorsa-data">28 agosto 2026</span><span class="sp-risorsa-cat">Curiosità</span></span><span class="sp-risorsa-basso"><h3 class="sp-risorsa-titolo">Grappein e la Casa dell’Orologio di Cogne</h3><span class="sp-risorsa-riga">Un medico che, duecento anni fa, gestì una miniera.</span><span class="sp-freccia" aria-hidden="true">→</span></span></a></li><li data-rivela><a class="sp-risorsa" href="bacheca-auguri-2026.html"><span class="sp-risorsa-alto"><span class="sp-risorsa-data">gennaio 2026</span><span class="sp-risorsa-cat">Auguri annuali</span></span><span class="sp-risorsa-basso"><h3 class="sp-risorsa-titolo">2026 · Orgoglio italiano</h3><span class="sp-risorsa-riga">Gli auguri del settantesimo anno.</span><span class="sp-freccia" aria-hidden="true">→</span></span></a></li></ul>
 </section>
 
-<section class="sp-sezione sp-wrap sp-invito" aria-labelledby="t-invito">
+<section class="sp-sezione sp-wrap sp-invito invito-centro" aria-labelledby="t-invito">
+  <span class="x-deco x-deco-a" aria-hidden="true"></span><span class="x-deco x-deco-b" aria-hidden="true"></span>
   <h2 class="sp-grande" id="t-invito" data-parole>Parliamone.</h2>
   <p class="sp-sub" data-rivela data-ritardo="200">Raccontateci come gestite oggi l’amministrazione. Il primo incontro serve a inquadrare la richiesta.</p>
   <div class="sp-bottoni" data-rivela data-ritardo="350">
