@@ -867,3 +867,31 @@ a.sp-p.t1:hover, a.sp-p.t2:hover, a.sp-p.t3:hover{ background:var(--sp-t3); }
 .sp-banda-intera{ height:auto; }
 .spark .sp-banda-intera img{ position:static; height:auto; inset:auto; animation:none; }
 .sp-banda-intera::after{ display:none; }
+
+/* ===== Auguri annuali: impaginazione ===== */
+.spark .articolo.augurio-2026{ max-width:none; display:grid; grid-template-columns:minmax(0, 5fr) minmax(0, 7fr); gap:32px clamp(40px, 5vw, 96px); align-items:start; }
+.spark .articolo.augurio-2026 .augurio-grande{ max-width:none; margin:0; position:sticky; top:112px; }
+.spark .augurio-2026 .augurio-grande img{ border-radius:var(--sp-r); }
+.spark .augurio-2026-testo{ max-width:62ch; }
+.spark .augurio-2026-testo p{ font-size:18px; line-height:1.65; }
+.spark .augurio-2026-testo p + p{ margin-top:1.1em; }
+
+.auguri-anni{ display:grid; }
+.anno{ display:grid; grid-template-columns:minmax(0, 4fr) minmax(0, 8fr); gap:24px clamp(40px, 5vw, 96px); align-items:start; padding-block:clamp(36px, 4vw, 64px); border-top:1px solid var(--salvia); scroll-margin-top:calc(var(--testata, 80px) + 24px); }
+.anno:first-child{ border-top:0; padding-top:0; }
+.anno-img{ display:block; aspect-ratio:1; padding:12px; border-radius:var(--sp-r); background:var(--sp-t2); position:sticky; top:112px; transition:background-color var(--veloce); }
+.anno-img:hover{ background:var(--sp-t1); }
+.anno-img img{ display:block; width:100%; height:100%; object-fit:contain; }
+.anno:target .anno-img{ outline:2px solid var(--arancio); outline-offset:3px; }
+.anno-testo{ max-width:64ch; }
+.anno-numero{ font-size:14px; font-weight:500; letter-spacing:.1em; color:var(--petrolio); }
+.anno-titolo{ margin:6px 0 20px; font-family:var(--titoli); font-weight:400; font-size:clamp(26px, 1.2vw + 18px, 36px); line-height:1.12; letter-spacing:-.02em; text-wrap:balance; }
+.anno-corpo p{ font-size:17px; line-height:1.65; }
+.anno-corpo p + p{ margin-top:.9em; }
+.spark .augurio figcaption{ text-transform:none; letter-spacing:0; }
+@media (max-width:860px){
+  .spark .articolo.augurio-2026{ grid-template-columns:1fr; }
+  .spark .articolo.augurio-2026 .augurio-grande{ position:static; max-width:420px; }
+  .anno{ grid-template-columns:1fr; gap:18px; }
+  .anno-img{ position:static; max-width:320px; }
+}
