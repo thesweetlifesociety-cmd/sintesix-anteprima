@@ -419,3 +419,13 @@ article.wrap{ padding-bottom:calc(var(--aria) / 2); }
 .persona:has(.persona-foto){ grid-template-columns:minmax(0, 140px) minmax(0, 4fr) minmax(0, 7fr); align-items:start; }
 .persona-foto{ display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover; object-position:50% 18%; border-radius:6px; }
 @media (max-width:720px){ .persona:has(.persona-foto){ grid-template-columns:96px minmax(0,1fr); } .persona:has(.persona-foto) p{ grid-column:1 / -1; } }
+
+/* Auguri: il testo di accompagnamento, a scomparsa sotto ogni biglietto */
+.augurio-testo{ margin-top:10px; font-size:15px; line-height:1.55; color:var(--petrolio); }
+.augurio-testo summary{ cursor:pointer; list-style:none; display:inline-flex; align-items:center; gap:8px; padding:6px 0; color:var(--ardesia); border-bottom:1px solid var(--salvia); }
+.augurio-testo summary::-webkit-details-marker{ display:none; }
+.augurio-testo summary::before{ content:"+"; font-size:18px; line-height:1; width:14px; }
+.augurio-testo[open] summary::before{ content:"–"; }
+.augurio-testo summary:hover{ border-bottom-color:var(--ardesia); }
+.augurio-testo > div{ padding-top:12px; }
+.augurio-testo p + p{ margin-top:10px; }
