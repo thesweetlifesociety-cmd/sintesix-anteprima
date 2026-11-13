@@ -912,10 +912,17 @@ a.sp-p.t1:hover, a.sp-p.t2:hover, a.sp-p.t3:hover{ background:var(--sp-t3); }
 .sp-vetrina-img{ height:clamp(150px, 14vw, 210px); object-position:50% 45%; }
 .sp-vetrina-conimg .sp-vetrina-titolo{ margin-top:auto; }
 #modulo{ scroll-margin-top:calc(var(--testata, 80px) + 16px); }
-/* Home: in filigrana i due strumenti del 1956 (i registri LEX e la calcolatrice), dietro i professionisti di oggi */
-.sp-fe-filigrana{ position:absolute; z-index:0; left:clamp(-40px, -2vw, 0px); top:clamp(70px, 9vw, 130px); width:min(54vw, 860px); height:auto; pointer-events:none; opacity:.3; mix-blend-mode:screen; filter:grayscale(1) contrast(1.1);
-  -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 62%, #000 45%, transparent 100%); mask-image:radial-gradient(ellipse 62% 58% at 50% 62%, #000 45%, transparent 100%); }
+/* Home: in filigrana i due strumenti del 1956 (la calcolatrice ESACTA e la Olivetti M20), in dissolvenza l'uno nell'altro, dietro i professionisti di oggi */
+.sp-fe-filigrana{ position:absolute; z-index:0; left:clamp(-20px, 1vw, 24px); top:clamp(76px, 8vw, 120px); width:min(46vw, 760px); aspect-ratio:1200/760; pointer-events:none; mix-blend-mode:screen;
+  -webkit-mask-image:radial-gradient(ellipse 60% 62% at 50% 55%, #000 52%, transparent 100%); mask-image:radial-gradient(ellipse 60% 62% at 50% 55%, #000 52%, transparent 100%); }
+.sp-fe-filigrana img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; opacity:0; }
+.sp-fe-filigrana img:first-child{ opacity:.3; }
+@media (prefers-reduced-motion:no-preference){
+  .sp-fe-filigrana img{ animation:sp-dissolvenza 14s ease-in-out infinite; }
+  .sp-fe-filigrana img:last-child{ animation-delay:-7s; }
+}
+@keyframes sp-dissolvenza{ 0%, 38%{ opacity:.3; } 50%, 88%{ opacity:0; } 100%{ opacity:.3; } }
 .sp-foto-eroe .sp-fe-dentro{ z-index:1; }
-@media (max-width:860px){ .sp-fe-filigrana{ width:96vw; top:84px; left:-4vw; opacity:.26; } }
+@media (max-width:860px){ .sp-fe-filigrana{ width:92vw; top:76px; left:4vw; } }
 /* «Richiedi un primo colloquio» da Commercialisti e Consulenti del Lavoro: Parliamone senza foto */
 body:has(#modulo:target) .sp-banda{ display:none; }
