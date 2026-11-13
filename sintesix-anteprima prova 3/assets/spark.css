@@ -899,10 +899,6 @@ a.sp-p.t1:hover, a.sp-p.t2:hover, a.sp-p.t3:hover{ background:var(--sp-t3); }
 /* ===== Foto · revisione REL 2 dello Studio ===== */
 /* bande intere: sui monitor molto larghi non superano l'altezza dello schermo */
 .spark .sp-banda-intera img{ width:100%; max-height:88vh; object-fit:cover; }
-/* una sola foto nella larghezza del testo (Mission e Vision: i tre soci) */
-.sp-foto-unica{ margin-top:clamp(8px, 2vw, 24px); }
-.sp-foto-unica img{ display:block; width:100%; height:auto; border-radius:var(--sp-r); }
-.sp-foto-unica + .sezione{ padding-top:calc(var(--sp-aria) / 2); }
 /* Home, quattro aree: in alto le stesse foto delle pagine di Consulenza */
 .sp-vetrina-conimg{ gap:16px; }
 .sp-vetrina-visi{ display:grid; gap:8px; height:clamp(150px, 14vw, 210px); }
@@ -912,17 +908,14 @@ a.sp-p.t1:hover, a.sp-p.t2:hover, a.sp-p.t3:hover{ background:var(--sp-t3); }
 .sp-vetrina-img{ height:clamp(150px, 14vw, 210px); object-position:50% 45%; }
 .sp-vetrina-conimg .sp-vetrina-titolo{ margin-top:auto; }
 #modulo{ scroll-margin-top:calc(var(--testata, 80px) + 16px); }
-/* Home: in filigrana i due strumenti del 1956 (la calcolatrice ESACTA e la Olivetti M20), in dissolvenza l'uno nell'altro, dietro i professionisti di oggi */
-.sp-fe-filigrana{ position:absolute; z-index:0; left:clamp(-20px, 1vw, 24px); top:clamp(76px, 8vw, 120px); width:min(46vw, 760px); aspect-ratio:1200/760; pointer-events:none; mix-blend-mode:screen;
-  -webkit-mask-image:radial-gradient(ellipse 60% 62% at 50% 55%, #000 52%, transparent 100%); mask-image:radial-gradient(ellipse 60% 62% at 50% 55%, #000 52%, transparent 100%); }
-.sp-fe-filigrana img{ position:absolute; inset:0; width:100%; height:100%; object-fit:contain; opacity:0; }
-.sp-fe-filigrana img:first-child{ opacity:.3; }
-@media (prefers-reduced-motion:no-preference){
-  .sp-fe-filigrana img{ animation:sp-dissolvenza 14s ease-in-out infinite; }
-  .sp-fe-filigrana img:last-child{ animation-delay:-7s; }
-}
-@keyframes sp-dissolvenza{ 0%, 38%{ opacity:.3; } 50%, 88%{ opacity:0; } 100%{ opacity:.3; } }
-.sp-foto-eroe .sp-fe-dentro{ z-index:1; }
-@media (max-width:860px){ .sp-fe-filigrana{ width:92vw; top:76px; left:4vw; } }
+/* Dal 1956: i due strumenti del 1956 in dissolvenza (foto di Marco Savio) */
+.sp-dissolvenza{ margin-top:clamp(8px, 2vw, 24px); display:grid; gap:12px; }
+.sp-dissolvenza-foto{ position:relative; aspect-ratio:16/10; overflow:hidden; border-radius:var(--sp-r); background:var(--sp-t2); }
+.sp-dissolvenza-foto img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.sp-dissolvenza-foto img + img{ opacity:0; }
+@media (prefers-reduced-motion:no-preference){ .sp-dissolvenza-foto img + img{ animation:sp-dissolvenza 12s ease-in-out infinite; } }
+@keyframes sp-dissolvenza{ 0%, 35%{ opacity:0; } 50%, 85%{ opacity:1; } 100%{ opacity:0; } }
+.sp-dissolvenza figcaption{ font-size:14px; color:var(--petrolio); }
+.sp-dissolvenza + .sezione{ padding-top:calc(var(--sp-aria) / 2); }
 /* «Richiedi un primo colloquio» da Commercialisti e Consulenti del Lavoro: Parliamone senza foto */
 body:has(#modulo:target) .sp-banda{ display:none; }
