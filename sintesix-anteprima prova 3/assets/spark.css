@@ -917,3 +917,5 @@ a.sp-p.t1:hover, a.sp-p.t2:hover, a.sp-p.t3:hover{ background:var(--sp-t3); }
   -webkit-mask-image:radial-gradient(ellipse 62% 58% at 50% 62%, #000 45%, transparent 100%); mask-image:radial-gradient(ellipse 62% 58% at 50% 62%, #000 45%, transparent 100%); }
 .sp-foto-eroe .sp-fe-dentro{ z-index:1; }
 @media (max-width:860px){ .sp-fe-filigrana{ width:96vw; top:84px; left:-4vw; opacity:.26; } }
+/* «Richiedi un primo colloquio» da Commercialisti e Consulenti del Lavoro: Parliamone senza foto */
+body:has(#modulo:target) .sp-banda{ display:none; }
